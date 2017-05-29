@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>Plate gen.</title>
+		<link href="index.css" rel="stylesheet"/>
+		<script src="jquery-3.2.1.min.js"></script>
+		<script src="index.js"></script>
+	</head>
+	<body>
+		<header>
+			<h1>RANDOM CAR PLATE GENERATOR</h1>
+		</header>
+		
+		<div class="content">
+			
+			<div class="gallery">
+			
+				<div class="gallery-inner">
+			
+					<div class="plate">
+					
+						<div class="plate-inner">
+								<div class="country">
+									<img class="country-img" src="data:image/png;base64,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">
+									<div class="label">EST</div>
+								</div>
+								<div class="number">XXX 000</div>
+						</div>
+						
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+		<footer>by kcio.</footer>
+	</body>
+</html>

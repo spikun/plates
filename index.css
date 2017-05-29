@@ -1,0 +1,104 @@
+@font-face {
+    font-family: 'LicensePlate';
+    src: url('LicensePlate.ttf'); /*URL to font*/
+}
+
+body {
+	text-align: center;
+    font-family: LicensePlate;
+	margin: 0;
+	background: gold;
+}
+
+body > header {
+	position: fixed;
+    top: 0;
+    width: 100%;
+	height 65px;
+    overflow: hidden;
+    z-index: 9999;
+}
+
+body > footer {
+	position: fixed;
+	bottom: 0;
+    width: 100%;
+	height 21px;
+    overflow: hidden;
+    z-index: 9999;
+	padding: 3px;
+}
+
+body > div.content {
+	position: absolute;
+	top: 65px;
+	bottom: 15px;
+	left: 0;
+	right: 0;
+	z-index: 10000;
+}
+
+.gallery {
+	position: relative;
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+.gallery-inner {
+	display: table-cell;
+    vertical-align: middle;
+}
+
+.plate {
+	margin: auto;
+    width: 800px;
+    height: 200px;
+    background: white;
+    border-radius: 10px;
+    border: 5px black solid;
+    margin-bottom: 80px;
+	position: relative;
+}
+.plate-inner {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.plate-inner .number {
+	font-size: 190px;
+    margin-top: 2px;
+    margin-left: 84px;
+}
+.plate-content {
+	position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.country {
+	display: inline-block;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    bottom: 0;
+    width: 100px;
+    border-radius: 5px 0 0 5px;
+    background: darkblue;
+    text-align: center;
+}
+.country .label {
+	position: absolute;
+    left: 13px;
+    bottom: 13px;
+    color: white;
+    font-size: 60px;
+}
+.country-img {
+	width: 90px;
+    margin-top: 25px;
+}
+
+
