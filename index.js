@@ -13,7 +13,7 @@ function RandomPlateGenerator() {
 		
 		var letters = generateLetters();
 		var numbers = random3Numbers();
-		container.html(letters + ' ' + numbers);
+		container.html(numbers + ' ' + letters);
 			
 		function generateLetters() {
 			var result = '';
