@@ -66,6 +66,7 @@ body > div.content {
     bottom: 0;
     left: 0;
     right: 0;
+    overflow: hidden;
 }
 .plate-inner .number {
 	font-size: 190px;

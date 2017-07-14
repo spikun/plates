@@ -7,10 +7,9 @@ function RandomPlateGenerator() {
 	
 	var interval;
 	var intervalId = 0;
+	var container = $('.plate .number');
 	
 	function generatePlate() {
-		var container = $('.plate .number');
-		
 		var letters = generateLetters();
 		var numbers = random3Numbers();
 		container.html(numbers + ' ' + letters);
@@ -38,13 +37,22 @@ function RandomPlateGenerator() {
 	
 	function setInterval(pInterval) {
 		interval = pInterval || 3000;
-		
+		stop();
+		intervalId = window.setInterval(generatePlate, interval);
+	}
+	
+	function stop() {
 		intervalId && clearInterval(intervalId);
-		window.setInterval(generatePlate, interval);
+	}
+	
+	function setPlate(value) {
+		container.html(value);
 	}
 	
 	return {
-		'start' : start,
-		'setInterval': setInterval
+		'start': start,
+		'setInterval': setInterval,
+		'stop': stop,
+		'setPlate': setPlate
 	};
 }
